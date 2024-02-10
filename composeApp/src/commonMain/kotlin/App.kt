@@ -1,10 +1,14 @@
 import androidx.compose.material.MaterialTheme
-import androidx.compose.material.Text
 import androidx.compose.runtime.Composable
+import cafe.adriel.voyager.navigator.Navigator
+import cafe.adriel.voyager.transitions.FadeTransition
+import presentation.screen.sample.SampleScreen
 
 @Composable
 fun App() {
     MaterialTheme {
-        Text(text = "Hello World!")
+        Navigator(screen = SampleScreen()) {
+            FadeTransition(it)
+        }
     }
 }
